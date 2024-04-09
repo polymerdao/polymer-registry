@@ -1,0 +1,35 @@
+{
+  "49483": {
+    "sim-client": {
+      "canonConnFrom": "connection-6",
+      "canonConnTo": "connection-17",
+      "universalChannel": ""
+    }
+  },
+  "84532": {
+    "clients": {
+      "sim-client": {
+        "canonConnFrom": "connection-4",
+        "canonConnTo": "connection-5",
+        "universalChannel": "channel-11"
+      },
+      "op-client": {
+        "canonConnFrom": "connection-10",
+        "canonConnTo": "connection-11",
+        "universalChannel": "channel-17"
+      }
+    }
+  },
+  "11155420": {
+    "sim-client": {
+      "canonConnFrom": "connection-0",
+      "canonConnTo": "connection-1",
+      "universalChannel": "channel-10"
+    },
+    "op-client": {
+      "canonConnFrom": "connection-8",
+      "canonConnTo": "connection-9",
+      "universalChannel": "channel-16"
+    }
+  }
+}

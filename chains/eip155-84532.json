@@ -1,0 +1,43 @@
+{
+  "name": "Base Sepolia Testnet",
+  "chain": "ETH",
+  "rpc": [
+    "https://sepolia.base.org",
+    "https://base-sepolia-rpc.publicnode.com",
+    "wss://base-sepolia-rpc.publicnode.com"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Sepolia Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://base.org",
+  "shortName": "basesep",
+  "chainId": 84532,
+  "networkId": 84532,
+  "slip44": 1,
+  "icon": "baseTestnet",
+  "explorers": [
+    {
+      "name": "basescout",
+      "url": "https://base-sepolia.blockscout.com",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "clients": {
+      "sim-client" : {
+          "canonConnFrom": "connection-4",
+          "canonConnTo": "connection-5",
+          "universalChannel": "channel-11"
+      },
+      "op-client": {
+          "canonConnFrom": "connection-10",
+          "canonConnTo": "connection-11",
+          "universalChannel": "channel-17"
+      }
+    }
+  }
+}
