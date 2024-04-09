@@ -30,7 +30,7 @@ Chain network and IBC info can be added in the /chains directory.
 
 Each chain has a dedicated .json file that should be named according to:
 
-`CAIP-2-chain-ID.json`
+`namespace-chain-ID.json`
 
 following the [CAIP-2 convention](https://chainagnostic.org/CAIPs/caip-2). For Base Sepolia testnet for example: eip155-84532.json
 

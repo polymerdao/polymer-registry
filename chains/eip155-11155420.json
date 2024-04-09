@@ -29,12 +29,16 @@
       "sim-client": {
         "canonConnFrom": "connection-0",
         "canonConnTo": "connection-1",
-        "universalChannel": "channel-10"
+        "universalChannel": "channel-10",
+        "universalChannelAddr": "0xC3318ce027C560B559b09b1aA9cA4FEBDDF252F5",
+        "dispatcherAddr": "0x6C9427E8d770Ad9e5a493D201280Cc178125CEc0"
     },
       "op-client": {
         "canonConnFrom": "connection-8",
         "canonConnTo": "connection-9",
-        "universalChannel": "channel-16"
+        "universalChannelId": "channel-16",
+        "universalChannelAddr": "0xC3318ce027C560B559b09b1aA9cA4FEBDDF252F5",
+        "dispatcherAddr": "0x58f1863f75c9db1c7266dc3d7b43832b58f35e83"
     }
   }
 }
