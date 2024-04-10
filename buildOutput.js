@@ -27,10 +27,12 @@ function processFiles(directoryPath) {
 
                 // Add the 'polymer' field to the output object
                 if (jsonData.polymer) {
-                    console.log(`Processing file: ${file}`)
-                    console.log('key:', key)
-                    console.log('value: ', jsonData.polymer);
                     output[key] = jsonData.polymer;
+                }
+
+                // Add the 'explorers' field to the output object
+                if (jsonData.explorers) {
+                    output[key].explorers = jsonData.explorers;
                 }
             }
         });

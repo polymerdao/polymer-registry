@@ -29,16 +29,18 @@
   "polymer": {
     "clients": {
       "sim-client" : {
+          "clientSuffix": "-sim",
           "canonConnFrom": "connection-4",
           "canonConnTo": "connection-5",
-          "universalChannel": "channel-11",
+          "universalChannelId": "channel-11",
           "universalChannelAddr": "0x5031fb609569b67608Ffb9e224754bb317f174cD",
           "dispatcherAddr": "0x0dE926fE2001B2c96e9cA6b79089CEB276325E9F"
       },
       "op-client": {
+          "clientSuffix": "-proofs-1",
           "canonConnFrom": "connection-10",
           "canonConnTo": "connection-11",
-          "universalChannel": "channel-17",
+          "universalChannelId": "channel-17",
           "universalChannelAddr": "0x50E32e236bfE4d514f786C9bC80061637dd5AF98",
           "dispatcherAddr": "0xfc1d3e02e00e0077628e8cc9edb6812f95db05dc"
       }

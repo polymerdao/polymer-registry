@@ -4,9 +4,6 @@
     "rpc": [
       "https://unidex-sepolia.rpc.caldera.xyz/http",
       "wss://unidex-sepolia.rpc.caldera.xyz/ws"
-
-
-
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -25,6 +22,7 @@
     ],
     "polymer": {
       "sim-client": {
+        "clientSuffix": "-sim",
         "canonConnFrom": "connection-6",
         "canonConnTo": "connection-17",
         "universalChannelId": "",

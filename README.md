@@ -32,7 +32,7 @@ Each chain has a dedicated .json file that should be named according to:
 
 `namespace-chain-ID.json`
 
-following the [CAIP-2 convention](https://chainagnostic.org/CAIPs/caip-2). For Base Sepolia testnet for example: eip155-84532.json
+following the [CAIP-2 convention](https://chainagnostic.org/CAIPs/caip-2). For Base Sepolia testnet for example: eip155-84532.json for the chainID eip155:84532.
 
 ### Add Polymer IBC data
 
@@ -42,16 +42,18 @@ Network information can be fetched from an [Ethereum chain registry](https://git
   "polymer": {
     "clients": {
       "sim-client" : {
+          "clientSuffix": "-sim",
           "canonConnFrom": "connection-4",
           "canonConnTo": "connection-5",
-          "universalChannel": "channel-11",
+          "universalChannelId": "channel-11",
           "universalChannelAddr": "0x5031fb609569b67608Ffb9e224754bb317f174cD",
           "dispatcherAddr": "0x0dE926fE2001B2c96e9cA6b79089CEB276325E9F"
       },
       "op-client": {
+          "clientSuffix": "-proofs-1",
           "canonConnFrom": "connection-10",
           "canonConnTo": "connection-11",
-          "universalChannel": "channel-17",
+          "universalChannelId": "channel-17",
           "universalChannelAddr": "0x50E32e236bfE4d514f786C9bC80061637dd5AF98",
           "dispatcherAddr": "0xfc1d3e02e00e0077628e8cc9edb6812f95db05dc"
       }
@@ -74,7 +76,7 @@ Additionally, there's a mapping where clientfIDs can be mapped to the chainID:
 ```js
 // Example for Base Sepolia
 {
-    'clientID' : '-84532'
+    'clientID' : 'eip155:84532'
 }
 ```
 
