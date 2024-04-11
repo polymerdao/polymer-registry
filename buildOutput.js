@@ -29,11 +29,6 @@ function processFiles(directoryPath) {
                 if (jsonData.polymer) {
                     output[key] = jsonData.polymer;
                 }
-
-                // Add the 'explorers' field to the output object
-                if (jsonData.explorers) {
-                    output[key].explorers = jsonData.explorers;
-                }
             }
         });
 

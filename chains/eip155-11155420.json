@@ -1,31 +1,32 @@
 {
-    "name": "OP Sepolia Testnet",
-    "chain": "ETH",
-    "rpc": [
-      "https://sepolia.optimism.io",
-      "https://optimism-sepolia.drpc.org",
-      "wss://optimism-sepolia.drpc.org"
-    ],
-    "faucets": ["https://app.optimism.io/faucet"],
-    "nativeCurrency": {
-      "name": "Sepolia Ether",
-      "symbol": "ETH",
-      "decimals": 18
-    },
-    "infoURL": "https://optimism.io",
-    "shortName": "opsep",
-    "chainId": 11155420,
-    "networkId": 11155420,
-    "slip44": 1,
-    "explorers": [
-      {
-        "name": "opscout",
-        "url": "https://optimism-sepolia.blockscout.com",
-        "icon": "blockscout",
-        "standard": "EIP3091"
-      }
-    ],
-    "polymer": {
+  "name": "OP Sepolia Testnet",
+  "chain": "ETH",
+  "rpc": [
+    "https://sepolia.optimism.io",
+    "https://optimism-sepolia.drpc.org",
+    "wss://optimism-sepolia.drpc.org"
+  ],
+  "faucets": ["https://app.optimism.io/faucet"],
+  "nativeCurrency": {
+    "name": "Sepolia Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://optimism.io",
+  "shortName": "opsep",
+  "chainId": 11155420,
+  "networkId": 11155420,
+  "slip44": 1,
+  "explorers": [
+    {
+      "name": "opscout",
+      "url": "https://optimism-sepolia.blockscout.com",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "clients": {
       "sim-client": {
         "clientSuffix": "-sim",
         "canonConnFrom": "connection-0",
@@ -43,4 +44,5 @@
         "dispatcherAddr": "0x58f1863f75c9db1c7266dc3d7b43832b58f35e83"
     }
   }
+}
 }

@@ -1,19 +1,15 @@
 {
   "49483": {
-    "sim-client": {
-      "clientSuffix": "-sim",
-      "canonConnFrom": "connection-6",
-      "canonConnTo": "connection-17",
-      "universalChannelId": "",
-      "universalChannelAddr": "",
-      "dispatcherAddr": ""
-    },
-    "explorers": [
-      {
-        "name": "caldera",
-        "url": "https://unidex-sepolia.explorer.caldera.xyz/"
+    "clients": {
+      "sim-client": {
+        "clientSuffix": "-sim",
+        "canonConnFrom": "connection-6",
+        "canonConnTo": "connection-17",
+        "universalChannelId": "",
+        "universalChannelAddr": "",
+        "dispatcherAddr": ""
       }
-    ]
+    }
   },
   "84532": {
     "clients": {
@@ -33,40 +29,26 @@
         "universalChannelAddr": "0x50E32e236bfE4d514f786C9bC80061637dd5AF98",
         "dispatcherAddr": "0xfc1d3e02e00e0077628e8cc9edb6812f95db05dc"
       }
-    },
-    "explorers": [
-      {
-        "name": "basescout",
-        "url": "https://base-sepolia.blockscout.com",
-        "icon": "blockscout",
-        "standard": "EIP3091"
-      }
-    ]
+    }
   },
   "11155420": {
-    "sim-client": {
-      "clientSuffix": "-sim",
-      "canonConnFrom": "connection-0",
-      "canonConnTo": "connection-1",
-      "universalChannelId": "channel-10",
-      "universalChannelAddr": "0xC3318ce027C560B559b09b1aA9cA4FEBDDF252F5",
-      "dispatcherAddr": "0x6C9427E8d770Ad9e5a493D201280Cc178125CEc0"
-    },
-    "op-client": {
-      "clientSuffix": "-proofs-1",
-      "canonConnFrom": "connection-8",
-      "canonConnTo": "connection-9",
-      "universalChannelId": "channel-16",
-      "universalChannelAddr": "0xC3318ce027C560B559b09b1aA9cA4FEBDDF252F5",
-      "dispatcherAddr": "0x58f1863f75c9db1c7266dc3d7b43832b58f35e83"
-    },
-    "explorers": [
-      {
-        "name": "opscout",
-        "url": "https://optimism-sepolia.blockscout.com",
-        "icon": "blockscout",
-        "standard": "EIP3091"
+    "clients": {
+      "sim-client": {
+        "clientSuffix": "-sim",
+        "canonConnFrom": "connection-0",
+        "canonConnTo": "connection-1",
+        "universalChannelId": "channel-10",
+        "universalChannelAddr": "0xC3318ce027C560B559b09b1aA9cA4FEBDDF252F5",
+        "dispatcherAddr": "0x6C9427E8d770Ad9e5a493D201280Cc178125CEc0"
+      },
+      "op-client": {
+        "clientSuffix": "-proofs-1",
+        "canonConnFrom": "connection-8",
+        "canonConnTo": "connection-9",
+        "universalChannelId": "channel-16",
+        "universalChannelAddr": "0xC3318ce027C560B559b09b1aA9cA4FEBDDF252F5",
+        "dispatcherAddr": "0x58f1863f75c9db1c7266dc3d7b43832b58f35e83"
       }
-    ]
+    }
   }
 }
