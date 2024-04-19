@@ -67,8 +67,19 @@ Providing the information per client on connection hops, universal channel (id a
 To combine all required Polymer info into one single json, run:
 
 ```sh
-node buildOutput.js
+node utils/buildOutput.js
 ```
+
+### Find connection hops for multi-hop IBC channels over Polymer
+
+To find what connection hops you need to input when creating an IBC channel between contracts on supported chains:
+
+```sh
+# Usage node utils/findConnectionHops.js <SOURCE CHAIN ID> <DESTINATION CHAIN ID>
+node utils/findConnectionHops.js 11155420 84532
+```
+
+With example values corresponding to Optimism Sepolia as source and Base Sepolia as destination.
 
 ## Client and app mapping
 
