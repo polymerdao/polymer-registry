@@ -7,7 +7,9 @@
 export const clientMap = {
     'sim-test-0-0' : 'eip155:11155420',
     'sim-test-2-2' : 'eip155:84532',
-    'optimism-4-4' : 'eip155:11155420',
-    'optimism-5-5' : 'eip155:84532',
+    'optimism-4-4' : 'eip155:11155420', //deprecated
+    'optimism-5-5' : 'eip155:84532', //deprecated
     'sim-test-8-8' : 'eip155:49483',
+    'opstack-v2-9-9' : 'eip155:11155420',
+    'optimism-10-10' : 'eip155:84532',
 };
