@@ -69,6 +69,9 @@ To combine all required Polymer info into one single json, run:
 ```sh
 node utils/buildOutput.js
 ```
+## Using data from registry to build with Polymer and vIBC
+
+The repo contains a few helper scripts to gain some information that can help trigger a channel handshake from your application.
 
 ### Find connection hops for multi-hop IBC channels over Polymer
 
@@ -80,6 +83,16 @@ node utils/findConnectionHops.js 11155420 84532
 ```
 
 With example values corresponding to Optimism Sepolia as source and Base Sepolia as destination.
+
+### Get the port ID for your contract on a chain
+
+When creating a channel you'll need to pass in the port ID on the counterparty. To find the prefix, run:
+
+```sh
+# Usage: node utils/getPortID.js <EIP155 CHAIN ID> <CONTRACT ADDRESS>
+node utils/getPortID.js 84532 0x1234567890AbCdEf1234567890aBcDeF12345678
+```
+As an example to find the port ID relating to the dummy address '0x1234567890AbCdEf1234567890aBcDeF12345678' on Base Sepolia.
 
 ## Client and app mapping
 
