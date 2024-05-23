@@ -1,0 +1,43 @@
+{
+  "name": "Magma Testnet",
+  "chain": "Magma",
+  "rpc": [
+    "https://unidex-sepolia.rpc.caldera.xyz/http",
+    "wss://unidex-sepolia.rpc.caldera.xyz/ws"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Sepolia Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://optimism.io",
+  "chainId": 49483,
+  "networkId": 49483,
+  "explorers": [
+    {
+      "name": "caldera",
+      "url": "https://unidex-sepolia.explorer.caldera.xyz/"
+    }
+  ],
+  "polymer": {
+    "clients": {
+      "sim-client": {
+        "clientSuffix": "molten-sim",
+        "canonConnFrom": "connection-16",
+        "canonConnTo": "connection-17",
+        "universalChannelId": "",
+        "universalChannelAddr": "0x689345D20AC68800555Ba9D000a5E1d163E93e42",
+        "dispatcherAddr": "0x02A3F40E6A66fDa056dA0757eacA1381753ecAA7"
+      },
+      "op-client": {
+        "clientSuffix": "molten-proofs-2",
+        "canonConnFrom": "",
+        "canonConnTo": "",
+        "universalChannelId": "",
+        "universalChannelAddr": "0x6e2f58fc600f52E9C9ceA113EDb5C1045C65bb75",
+        "dispatcherAddr": "0x12030CcD93ebA4C0C8F3B59ad70A05C042B0c8e1"        
+      }
+    }
+  }
+}

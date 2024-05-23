@@ -1,0 +1,50 @@
+{
+  "name": "OP Sepolia Testnet",
+  "chain": "ETH",
+  "rpc": [
+    "https://sepolia.optimism.io",
+    "https://optimism-sepolia.drpc.org",
+    "wss://optimism-sepolia.drpc.org"
+  ],
+  "faucets": [
+    "https://app.optimism.io/faucet"
+  ],
+  "nativeCurrency": {
+    "name": "Sepolia Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://optimism.io",
+  "shortName": "opsep",
+  "chainId": 11155420,
+  "networkId": 11155420,
+  "slip44": 1,
+  "explorers": [
+    {
+      "name": "opscout",
+      "url": "https://optimism-sepolia.blockscout.com",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "clients": {
+      "sim-client": {
+        "clientSuffix": "optimism-sim",
+        "canonConnFrom": "connection-0",
+        "canonConnTo": "connection-1",
+        "universalChannelId": "channel-174",
+        "universalChannelAddr": "0x3EaD7657C88b1CCf7f538564B2d475CEAEdA575d",
+        "dispatcherAddr": "0x1C5d906A2c1C05a3E788a5EfAa2f582825689778"
+      },
+      "op-client": {
+        "clientSuffix": "optimism-proofs-2",
+        "canonConnFrom": "connection-18",
+        "canonConnTo": "connection-19",
+        "universalChannelId": "channel-170",
+        "universalChannelAddr": "0x6c3AD733e52f700b47155e5e09b784b9d324C420",
+        "dispatcherAddr": "0x8087388885Fc8dB7324446C183024091E012BA55"
+      }
+    }
+  }
+}

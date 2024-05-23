@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Directory containing the JSON files
-const directoryPath = './chains'; // Update this path as needed
+const directoryPath = './staging/chains'; // Update this path as needed
 
 // Function to read and process files
 function processFiles(directoryPath) {
@@ -33,7 +33,7 @@ function processFiles(directoryPath) {
         });
 
         // Write the output object to 'output.json' in the  'dist' directory
-        fs.writeFileSync('dist/output.json', JSON.stringify(output, null, 2));
+        fs.writeFileSync('staging/dist/output.json', JSON.stringify(output, null, 2));
         console.log('output.json has been generated successfully.');
     });
 }
