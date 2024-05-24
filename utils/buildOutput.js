@@ -1,8 +1,20 @@
 const fs = require('fs');
 const path = require('path');
 
+if (process.argv.length !== 3) {
+    console.error('Usage: node utils/buildProdOutput.js <environment>');
+    process.exit(1);
+}
+
+else if (process.argv[2] !== 'production' && process.argv[2] !== 'staging') {
+    console.error('Invalid environment. Valid arguments are "production" or "staging".');
+    process.exit(1);
+}
+
+const environment = process.argv[2];
+
 // Directory containing the JSON files
-const directoryPath = './staging/chains'; // Update this path as needed
+const directoryPath = `chains/${environment}`; // Update this path as needed
 
 // Function to read and process files
 function processFiles(directoryPath) {
@@ -33,7 +45,7 @@ function processFiles(directoryPath) {
         });
 
         // Write the output object to 'output.json' in the  'dist' directory
-        fs.writeFileSync('staging/dist/output.json', JSON.stringify(output, null, 2));
+        fs.writeFileSync(`dist/${environment}/output.json`, JSON.stringify(output, null, 2));
         console.log('output.json has been generated successfully.');
     });
 }

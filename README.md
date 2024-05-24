@@ -67,8 +67,9 @@ Providing the information per client on connection hops, universal channel (id a
 To combine all required Polymer info into one single json, run:
 
 ```sh
-node utils/buildOutput.js
+node utils/buildOutput.js <environment>
 ```
+where <environment> is staging or production
 ## Using data from registry to build with Polymer and vIBC
 
 The repo contains a few helper scripts to gain some information that can help trigger a channel handshake from your application.
