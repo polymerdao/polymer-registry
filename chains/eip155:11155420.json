@@ -31,7 +31,7 @@
         "clientSuffix": "optimism-sim",
         "canonConnFrom": "connection-0",
         "canonConnTo": "connection-1",
-        "universalChannelId": "channel-40272",
+        "universalChannelId": "channel-174",
         "universalChannelAddr": "0x3EaD7657C88b1CCf7f538564B2d475CEAEdA575d",
         "dispatcherAddr": "0x8957494cCD4B085133E9A8d3600b766427d4976a"
     },
@@ -39,7 +39,7 @@
         "clientSuffix": "optimism-proofs-2",
         "canonConnFrom": "connection-18",
         "canonConnTo": "connection-19",
-        "universalChannelId": "channel-40260",
+        "universalChannelId": "channel-170",
         "universalChannelAddr": "0x6c3AD733e52f700b47155e5e09b784b9d324C420",
         "dispatcherAddr": "0xE2029629f51ab994210d671Dc08b7Ec94899b278"
     }
