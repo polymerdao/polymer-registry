@@ -17,7 +17,7 @@ function processFiles(directoryPath) {
 
         files.forEach((file) => {
             // Check if the file is a JSON file
-            if (path.extname(file) === '.json' && file.startsWith('eip155:')) {
+            if (path.extname(file) === '.json' && file.startsWith('eip155-')) {
                 // Extract the key from the filename
                 const key = file.slice(7, -5); // Remove 'eip-' prefix and '.json' suffix
 

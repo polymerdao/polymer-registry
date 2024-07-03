@@ -8,7 +8,7 @@ if (!eip155ChainID || !contractAddr) {
 }
 
 function getConfig(chainID) {
-    return require(`../chains/eip155:${chainID}.json`);
+    return require(`../chains/eip155-${chainID}.json`);
 }
 
 function getSimClientPortID(chainID, contractAddr) {
