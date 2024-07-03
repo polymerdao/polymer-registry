@@ -32,7 +32,7 @@ Each chain has a dedicated .json file that should be named according to:
 
 `namespace-chain-ID.json`
 
-following the [CAIP-2 convention](https://chainagnostic.org/CAIPs/caip-2). For Base Sepolia testnet for example: eip155:84532.json for the chainName eip155:84532.
+following the [CAIP-2 convention](https://chainagnostic.org/CAIPs/caip-2). For Base Sepolia testnet for example: eip155-84532.json for the chainName eip155:84532.
 
 ### Add Polymer IBC data
 
