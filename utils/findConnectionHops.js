@@ -7,8 +7,8 @@ if (!source || !destination) {
 }
 
 function getConfigs(source, destination) {
-  const srcConfigPath = `../chains/eip155:${source}.json`;
-  const destConfigPath = `../chains/eip155:${destination}.json`;
+  const srcConfigPath = `../chains/eip155-${source}.json`;
+  const destConfigPath = `../chains/eip155-${destination}.json`;
 
   const srcConfig = require(srcConfigPath);
   const destConfig = require(destConfigPath);
@@ -18,11 +18,11 @@ function getConfigs(source, destination) {
 
 function getConnectionHops (source, destination) {
   const { srcConfig, destConfig } = getConfigs(source, destination);
-  
+
   const simConHops = [srcConfig.polymer.clients['sim-client'].canonConnFrom, destConfig.polymer.clients['sim-client'].canonConnTo];
   const proofsConHops = [srcConfig.polymer.clients['op-client'].canonConnFrom, destConfig.polymer.clients['op-client'].canonConnTo];
-  
-  return { simConHops, proofsConHops };  
+
+  return { simConHops, proofsConHops };
 }
 
 
@@ -42,7 +42,7 @@ function main() {
   console.log(`Connection hops from ${srcConfig.name} to ${destConfig.name}:`)
   console.log('-'.repeat(80));
   console.log('Sim-client connection hops:', simConHops);
-  console.log('Proof-client connection hops:', proofsConHops);  
+  console.log('Proof-client connection hops:', proofsConHops);
 }
 
 main();
