@@ -1,31 +1,30 @@
 {
-  "49483": {
-    "clients": {
-      "sim-client": {
-        "clientSuffix": "molten-sim",
-        "canonConnFrom": "connection-16",
-        "canonConnTo": "connection-17",
-        "universalChannelId": "",
-        "universalChannelAddr": "0x689345D20AC68800555Ba9D000a5E1d163E93e42",
-        "dispatcherAddr": "0x02A3F40E6A66fDa056dA0757eacA1381753ecAA7"
-      },
-      "op-client": {
-        "clientSuffix": "molten-proofs-2",
-        "canonConnFrom": "",
-        "canonConnTo": "",
-        "universalChannelId": "",
-        "universalChannelAddr": "0x6e2f58fc600f52E9C9ceA113EDb5C1045C65bb75",
-        "dispatcherAddr": "0x12030CcD93ebA4C0C8F3B59ad70A05C042B0c8e1"
-      }
-    }
-  },
   "84532": {
+    "name": "Base Sepolia Testnet",
+    "shortName": "basesep",
+    "rpc": [
+      "https://sepolia.base.org",
+      "https://base-sepolia-rpc.publicnode.com",
+      "wss://base-sepolia-rpc.publicnode.com"
+    ],
+    "explorers": [
+      {
+        "name": "basescout",
+        "url": "https://base-sepolia.blockscout.com",
+        "icon": "blockscout",
+        "standard": "EIP3091"
+      }
+    ],
+    "dispatcherAddr": "0x35a9837aCfdc03cA89bB6E76aa62749F01C38445",
+    "dispatcherStartBlock": 8755882,
+    "clientName": "base-sepolia",
+    "universalChannelAddr": "0x19568BEaB4CEccb07FB01e78C8818e66f2db6070",
     "clients": {
       "sim-client": {
         "clientSuffix": "base-sim",
         "canonConnFrom": "connection-4",
         "canonConnTo": "connection-5",
-        "universalChannelId": "channel-175",
+        "universalChannelId": "channel-40273",
         "universalChannelAddr": "0x77e69Ab080Fb5d02D4404A6e7cDeC18617A24671",
         "dispatcherAddr": "0xb7B9f6f8CF00bf9fAe840A608600F47A665080f4"
       },
@@ -34,28 +33,47 @@
         "canonConnFrom": "connection-20",
         "canonConnTo": "connection-21",
         "universalChannelId": "channel-40261",
-        "universalChannelAddr": "0x7264fb109C059Fe56551F712e7B869a8bCA4E9CB",
-        "dispatcherAddr": "0x9fcd52449261F732d017F8BD1CaCDc3dFbcD0361"
+        "universalChannelAddr": "0xB9322b193E669cAA5DDAA571c653BFA7501Ab063",
+        "dispatcherAddr": "0xd375936Eb4653AB3E03ADD4b3E406AF0C779A5f4"
       }
     }
   },
   "11155420": {
+    "name": "OP Sepolia Testnet",
+    "shortName": "opsep",
+    "rpc": [
+      "https://sepolia.optimism.io",
+      "https://optimism-sepolia.drpc.org",
+      "wss://optimism-sepolia.drpc.org"
+    ],
+    "explorers": [
+      {
+        "name": "opscout",
+        "url": "https://optimism-sepolia.blockscout.com",
+        "icon": "blockscout",
+        "standard": "EIP3091"
+      }
+    ],
+    "dispatcherAddr": "0x282936F908Ee2F451E44e3afC712C7f47092827c",
+    "dispatcherStartBlock": 10738751,
+    "clientName": "optimism-sepolia",
+    "universalChannelAddr": "0x0563F65282d0939cAA6C6018E96BBa143891A2F7",
     "clients": {
       "sim-client": {
         "clientSuffix": "optimism-sim",
         "canonConnFrom": "connection-0",
         "canonConnTo": "connection-1",
-        "universalChannelId": "channel-174",
+        "universalChannelId": "channel-40272",
         "universalChannelAddr": "0x3EaD7657C88b1CCf7f538564B2d475CEAEdA575d",
         "dispatcherAddr": "0x8957494cCD4B085133E9A8d3600b766427d4976a"
       },
       "op-client": {
-        "clientSuffix": "optimism-proofs-2",
+        "clientSuffix": "optimism-proofs",
         "canonConnFrom": "connection-18",
         "canonConnTo": "connection-19",
-        "universalChannelId": "channel-170",
+        "universalChannelId": "channel-40260",
         "universalChannelAddr": "0x6c3AD733e52f700b47155e5e09b784b9d324C420",
-        "dispatcherAddr": "0xE2029629f51ab994210d671Dc08b7Ec94899b278"
+        "dispatcherAddr": "0xE1Da79EeD65e5B9024a86307cC1c70D508D963e9"
       }
     }
   }
