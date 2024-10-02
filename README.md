@@ -30,7 +30,7 @@ Chain network and IBC info can be added in the /chains directory.
 
 Each chain has a dedicated .json file that should be named according to:
 
-`namespace-chain-ID.json`
+`namespace-chainID.json`
 
 following the [CAIP-2 convention](https://chainagnostic.org/CAIPs/caip-2). For Base Sepolia testnet for example: eip155-84532.json for the chainName eip155:84532.
 
@@ -67,52 +67,7 @@ Providing the information per client on connection hops, universal channel (id a
 To combine all required Polymer info into one single json, run:
 
 ```sh
-node utils/buildOutput.js
-```
-## Using data from registry to build with Polymer and vIBC
-
-The repo contains a few helper scripts to gain some information that can help trigger a channel handshake from your application.
-
-### Find connection hops for multi-hop IBC channels over Polymer
-
-To find what connection hops you need to input when creating an IBC channel between contracts on supported chains:
-
-```sh
-# Usage node utils/findConnectionHops.js <SOURCE CHAIN ID> <DESTINATION CHAIN ID>
-node utils/findConnectionHops.js 11155420 84532
-```
-
-With example values corresponding to Optimism Sepolia as source and Base Sepolia as destination.
-
-### Get the port ID for your contract on a chain
-
-When creating a channel you'll need to pass in the port ID on the counterparty. To find the prefix, run:
-
-```sh
-# Usage: node utils/getPortID.js <EIP155 CHAIN ID> <CONTRACT ADDRESS>
-node utils/getPortID.js 84532 0x1234567890AbCdEf1234567890aBcDeF12345678
-```
-As an example to find the port ID relating to the dummy address '0x1234567890AbCdEf1234567890aBcDeF12345678' on Base Sepolia.
-
-## Client and app mapping
-
-Additionally, there's a mapping where clientfIDs can be mapped to the chainID:
-```js
-// Example for Base Sepolia
-{
-    '<clientID>' : 'eip155:84532'
-}
-```
-
-And applications can register like so:
-```js
-{
-    '0x1234567890AbCdEf1234567890aBcDeF12345678' : {
-        name: 'DummyApp',
-        icon: 'https://dummyapp.com/icon.png',
-        url: 'https://dummyapp.com'
-    }
-}
+node buildOutput.js
 ```
 
 ## Disclaimer

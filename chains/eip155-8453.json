@@ -1,0 +1,74 @@
+{
+  "name": "Base",
+  "chain": "ETH",
+  "rpc": [
+    "https://mainnet.base.org/",
+    "https://developer-access-mainnet.base.org/",
+    "https://base.gateway.tenderly.co",
+    "wss://base.gateway.tenderly.co",
+    "https://base-rpc.publicnode.com",
+    "wss://base-rpc.publicnode.com"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://base.org",
+  "shortName": "base",
+  "chainId": 8453,
+  "networkId": 8453,
+  "icon": "base",
+  "explorers": [
+    {
+      "name": "basescan",
+      "url": "https://basescan.org",
+      "standard": "none"
+    },
+    {
+      "name": "basescout",
+      "url": "https://base.blockscout.com",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    },
+    {
+      "name": "dexguru",
+      "url": "https://base.dex.guru",
+      "icon": "dexguru",
+      "standard": "EIP3091"
+    }
+  ],
+  "status": "active",
+  "polymer": {
+    "chainName": "base-mainnet",
+    "dispatcherAddr": "0xF42E19F9e4F5d93FdfA20F1ca78dB5B56789F778",
+    "dispatcherStartBlock": 19389139,
+    "clients": {
+      "sim-client": {
+        "clientSuffix": "base-sim",
+        "canonConnFrom": "connection-4",
+        "canonConnTo": "connection-5",
+        "dispatcherAddr": "",
+        "universalChannels": [
+          {
+            "id": "",
+            "addr": "0xDe2532E3Fa17DDfb9f7AFafeeE50607F4e5d161b"
+          }
+        ]
+      },
+      "op-client": {
+        "clientSuffix": "base-proofs-2",
+        "canonConnFrom": "connection-20",
+        "canonConnTo": "connection-21",
+        "dispatcherAddr": "",
+        "universalChannels": [
+          {
+            "id": "",
+            "addr": ""
+          }
+        ]
+      }
+    }
+  }
+}
