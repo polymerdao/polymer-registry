@@ -31,8 +31,8 @@
       }
     ],
     "chainName": "optimism-mainnet",
-    "dispatcherAddr": "",
-    "dispatcherStartBlock": 0,
+    "dispatcherAddr": "0xF42E19F9e4F5d93FdfA20F1ca78dB5B56789F778",
+    "dispatcherStartBlock": 124984397,
     "clients": {
       "sim-client": {
         "clientSuffix": "optimism-sim",
@@ -42,7 +42,7 @@
         "universalChannels": [
           {
             "id": "",
-            "addr": ""
+            "addr": "0xDe2532E3Fa17DDfb9f7AFafeeE50607F4e5d161b"
           }
         ]
       },
@@ -91,8 +91,8 @@
       }
     ],
     "chainName": "base-mainnet",
-    "dispatcherAddr": "",
-    "dispatcherStartBlock": 0,
+    "dispatcherAddr": "0xF42E19F9e4F5d93FdfA20F1ca78dB5B56789F778",
+    "dispatcherStartBlock": 19389139,
     "clients": {
       "sim-client": {
         "clientSuffix": "base-sim",
@@ -102,7 +102,7 @@
         "universalChannels": [
           {
             "id": "",
-            "addr": ""
+            "addr": "0xDe2532E3Fa17DDfb9f7AFafeeE50607F4e5d161b"
           }
         ]
       },
