@@ -26,20 +26,19 @@
     }
   ],
   "polymer": {
-    "chainName": "optimism-staging",
-    "dispatcherAddr": "0xE1Da79EeD65e5B9024a86307cC1c70D508D963e9",
-    "dispatcherStartBlock": 10230153,
-    "universalChannelAddr": "0x10cF1790a2be2C4e68747aF3Afc24f8Ecf12e720",
+    "chainName": "optimism-testnet",
+    "dispatcherAddr": "0x282936F908Ee2F451E44e3afC712C7f47092827c",
+    "dispatcherStartBlock": 10738751,
     "clients": {
       "sim-client": {
         "clientSuffix": "optimism-sim",
         "canonConnFrom": "connection-0",
         "canonConnTo": "connection-1",
-        "dispatcherAddr": "0x8957494cCD4B085133E9A8d3600b766427d4976a",
+        "dispatcherAddr": "",
         "universalChannels": [
           {
             "id": "channel-40272",
-            "addr": "0x3EaD7657C88b1CCf7f538564B2d475CEAEdA575d"
+            "addr": ""
           }
         ]
       },
@@ -47,11 +46,11 @@
         "clientSuffix": "optimism-proofs",
         "canonConnFrom": "connection-18",
         "canonConnTo": "connection-19",
-        "dispatcherAddr": "0xE1Da79EeD65e5B9024a86307cC1c70D508D963e9",
+        "dispatcherAddr": "",
         "universalChannels": [
           {
             "id": "channel-40260",
-            "addr": "0x6c3AD733e52f700b47155e5e09b784b9d324C420"
+            "addr": "0x0563F65282d0939cAA6C6018E96BBa143891A2F7"
           }
         ]
       }

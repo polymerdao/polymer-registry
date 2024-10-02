@@ -26,19 +26,19 @@
     }
   ],
   "polymer": {
-    "chainName": "base-staging",
-    "dispatcherAddr": "0xd375936Eb4653AB3E03ADD4b3E406AF0C779A5f4",
-    "dispatcherStartBlock": 8247282,
+    "chainName": "base-testnet",
+    "dispatcherAddr": "0x35a9837aCfdc03cA89bB6E76aa62749F01C38445",
+    "dispatcherStartBlock": 8755882,
     "clients": {
-      "sim-client" : {
+      "sim-client": {
         "clientSuffix": "base-sim",
         "canonConnFrom": "connection-4",
         "canonConnTo": "connection-5",
-        "dispatcherAddr": "0xb7B9f6f8CF00bf9fAe840A608600F47A665080f4",
+        "dispatcherAddr": "",
         "universalChannels": [
           {
-            "id": "channel-40273",
-            "addr": "0x77e69Ab080Fb5d02D4404A6e7cDeC18617A24671"
+            "id": "",
+            "addr": ""
           }
         ]
       },
@@ -46,11 +46,11 @@
         "clientSuffix": "base-proofs-2",
         "canonConnFrom": "connection-20",
         "canonConnTo": "connection-21",
-        "universalChannelId": "channel-40261",
+        "dispatcherAddr": "",
         "universalChannels": [
           {
             "id": "channel-40261",
-            "addr": "0xB9322b193E669cAA5DDAA571c653BFA7501Ab063"
+            "addr": "0x19568BEaB4CEccb07FB01e78C8818e66f2db6070"
           }
         ]
       }
