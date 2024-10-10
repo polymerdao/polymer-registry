@@ -17,31 +17,20 @@
     ],
     "chainName": "base-testnet",
     "dispatcherAddr": "0x35a9837aCfdc03cA89bB6E76aa62749F01C38445",
+    "uchAddr": "0x19568BEaB4CEccb07FB01e78C8818e66f2db6070",
     "dispatcherStartBlock": 8755882,
     "clients": {
       "sim-client": {
         "clientSuffix": "base-sim",
-        "canonConnFrom": "connection-4",
-        "canonConnTo": "connection-5",
-        "dispatcherAddr": "",
-        "universalChannels": [
-          {
-            "id": "",
-            "addr": ""
-          }
-        ]
+        "canonConnFrom": "connection-44",
+        "canonConnTo": "connection-45",
+        "universalChannelId": ""
       },
       "op-client": {
         "clientSuffix": "base-proofs-2",
-        "canonConnFrom": "connection-20",
-        "canonConnTo": "connection-21",
-        "dispatcherAddr": "",
-        "universalChannels": [
-          {
-            "id": "channel-40261",
-            "addr": "0x19568BEaB4CEccb07FB01e78C8818e66f2db6070"
-          }
-        ]
+        "canonConnFrom": "connection-46",
+        "canonConnTo": "connection-47",
+        "universalChannelId": ""
       }
     }
   },
@@ -63,31 +52,20 @@
     ],
     "chainName": "optimism-testnet",
     "dispatcherAddr": "0x282936F908Ee2F451E44e3afC712C7f47092827c",
+    "uchAddr": "0x0563F65282d0939cAA6C6018E96BBa143891A2F7",
     "dispatcherStartBlock": 10738751,
     "clients": {
       "sim-client": {
         "clientSuffix": "optimism-sim",
-        "canonConnFrom": "connection-0",
-        "canonConnTo": "connection-1",
-        "dispatcherAddr": "",
-        "universalChannels": [
-          {
-            "id": "channel-40272",
-            "addr": ""
-          }
-        ]
+        "canonConnFrom": "connection-42",
+        "canonConnTo": "connection-43",
+        "universalChannelId": ""
       },
       "op-client": {
         "clientSuffix": "optimism-proofs",
-        "canonConnFrom": "connection-18",
-        "canonConnTo": "connection-19",
-        "dispatcherAddr": "",
-        "universalChannels": [
-          {
-            "id": "channel-40260",
-            "addr": "0x0563F65282d0939cAA6C6018E96BBa143891A2F7"
-          }
-        ]
+        "canonConnFrom": "connection-40",
+        "canonConnTo": "connection-41",
+        "universalChannels": ""
       }
     }
   }
