@@ -25,15 +25,10 @@
         "canonConnTo": "",
         "universalChannelId": ""
       },
-      "op-client": {
-        "canonConnFrom": "",
-        "canonConnTo": "",
-        "universalChannelId": ""
-      },
       "subfinality": {
         "canonConnFrom": "connection-50",
         "canonConnTo": "connection-51",
-        "universalChannelId": ""
+        "universalChannelId": "channel-40878 "
       }
     }
   },
@@ -63,15 +58,10 @@
         "canonConnTo": "",
         "universalChannelId": ""
       },
-      "op-client": {
-        "canonConnFrom": "",
-        "canonConnTo": "",
-        "universalChannels": ""
-      },
       "subfinality": {
         "canonConnFrom": "connection-48",
         "canonConnTo": "connection-49",
-        "universalChannelId": ""
+        "universalChannelId": "channel-40879"
       }
     }
   }

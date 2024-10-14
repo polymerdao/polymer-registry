@@ -27,32 +27,19 @@
   ],
   "polymer": {
     "chainName": "base-testnet",
-    "dispatcherAddr": "0x35a9837aCfdc03cA89bB6E76aa62749F01C38445",
+    "dispatcherAddr": "0xD46875efF3fEa2c9c9A310f53d74E7BdF411f672",
+    "uchAddr": "0x5FBf9a7F147B0Ae7D11DA9dE741f6b10dF06e9F8",
     "dispatcherStartBlock": 8755882,
     "clients": {
       "sim-client": {
-        "clientSuffix": "base-sim",
-        "canonConnFrom": "connection-4",
-        "canonConnTo": "connection-5",
-        "dispatcherAddr": "",
-        "universalChannels": [
-          {
-            "id": "",
-            "addr": ""
-          }
-        ]
+        "canonConnFrom": "",
+        "canonConnTo": "",
+        "universalChannelId": ""
       },
-      "op-client": {
-        "clientSuffix": "base-proofs-2",
-        "canonConnFrom": "connection-20",
-        "canonConnTo": "connection-21",
-        "dispatcherAddr": "",
-        "universalChannels": [
-          {
-            "id": "channel-40261",
-            "addr": "0x19568BEaB4CEccb07FB01e78C8818e66f2db6070"
-          }
-        ]
+      "subfinality": {
+        "canonConnFrom": "connection-50",
+        "canonConnTo": "connection-51",
+        "universalChannelId": "channel-40878 "
       }
     }
   }
