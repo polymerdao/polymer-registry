@@ -16,20 +16,23 @@
       }
     ],
     "chainName": "base-testnet",
-    "dispatcherAddr": "0x35a9837aCfdc03cA89bB6E76aa62749F01C38445",
-    "uchAddr": "0x19568BEaB4CEccb07FB01e78C8818e66f2db6070",
+    "dispatcherAddr": "0xD46875efF3fEa2c9c9A310f53d74E7BdF411f672",
+    "uchAddr": "0x5FBf9a7F147B0Ae7D11DA9dE741f6b10dF06e9F8",
     "dispatcherStartBlock": 8755882,
     "clients": {
       "sim-client": {
-        "clientSuffix": "base-sim",
-        "canonConnFrom": "connection-44",
-        "canonConnTo": "connection-45",
+        "canonConnFrom": "",
+        "canonConnTo": "",
         "universalChannelId": ""
       },
       "op-client": {
-        "clientSuffix": "base-proofs-2",
-        "canonConnFrom": "connection-46",
-        "canonConnTo": "connection-47",
+        "canonConnFrom": "",
+        "canonConnTo": "",
+        "universalChannelId": ""
+      },
+      "subfinality": {
+        "canonConnFrom": "connection-50",
+        "canonConnTo": "connection-51",
         "universalChannelId": ""
       }
     }
@@ -51,21 +54,24 @@
       }
     ],
     "chainName": "optimism-testnet",
-    "dispatcherAddr": "0x282936F908Ee2F451E44e3afC712C7f47092827c",
-    "uchAddr": "0x0563F65282d0939cAA6C6018E96BBa143891A2F7",
+    "dispatcherAddr": "0xA8887C2689F1cE60081A9F37537483dD66fe2e1a",
+    "uchAddr": "0x39D6b9b57eCa2323f1c7386541767C43fA70bB83",
     "dispatcherStartBlock": 10738751,
     "clients": {
       "sim-client": {
-        "clientSuffix": "optimism-sim",
-        "canonConnFrom": "connection-42",
-        "canonConnTo": "connection-43",
+        "canonConnFrom": "",
+        "canonConnTo": "",
         "universalChannelId": ""
       },
       "op-client": {
-        "clientSuffix": "optimism-proofs",
-        "canonConnFrom": "connection-40",
-        "canonConnTo": "connection-41",
+        "canonConnFrom": "",
+        "canonConnTo": "",
         "universalChannels": ""
+      },
+      "subfinality": {
+        "canonConnFrom": "connection-48",
+        "canonConnTo": "connection-49",
+        "universalChannelId": ""
       }
     }
   }
