@@ -1,7 +1,7 @@
 {
   "10": {
     "name": "OP Mainnet",
-    "shortName": "oeth",
+    "shortName": "optimism",
     "rpc": [
       "https://mainnet.optimism.io",
       "https://optimism-rpc.publicnode.com",
@@ -31,7 +31,7 @@
       }
     ],
     "chainName": "optimism-mainnet",
-    "dispatcherAddr": "0xF42E19F9e4F5d93FdfA20F1ca78dB5B56789F778",
+    "dispatcherAddr": "0x7b456332e91Edf68B7d5E517085D5b15F9133fb8",
     "dispatcherStartBlock": 124984397,
     "clients": {
       "sim-client": {
@@ -91,7 +91,7 @@
       }
     ],
     "chainName": "base-mainnet",
-    "dispatcherAddr": "0xF42E19F9e4F5d93FdfA20F1ca78dB5B56789F778",
+    "dispatcherAddr": "0x7b456332e91Edf68B7d5E517085D5b15F9133fb8",
     "dispatcherStartBlock": 19389139,
     "clients": {
       "sim-client": {
