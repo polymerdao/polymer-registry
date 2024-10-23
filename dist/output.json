@@ -13,14 +13,14 @@
     ],
     "explorers": [
       {
-        "name": "etherscan",
-        "url": "https://optimistic.etherscan.io",
-        "standard": "EIP3091"
-      },
-      {
         "name": "blockscout",
         "url": "https://optimism.blockscout.com",
         "icon": "blockscout",
+        "standard": "EIP3091"
+      },
+      {
+        "name": "etherscan",
+        "url": "https://optimistic.etherscan.io",
         "standard": "EIP3091"
       },
       {
@@ -73,15 +73,15 @@
     ],
     "explorers": [
       {
-        "name": "basescan",
-        "url": "https://basescan.org",
-        "standard": "none"
-      },
-      {
         "name": "basescout",
         "url": "https://base.blockscout.com",
         "icon": "blockscout",
         "standard": "EIP3091"
+      },
+      {
+        "name": "basescan",
+        "url": "https://basescan.org",
+        "standard": "none"
       },
       {
         "name": "dexguru",
