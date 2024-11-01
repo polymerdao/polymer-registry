@@ -42,7 +42,7 @@
         "universalChannels": [
           {
             "id": "",
-            "addr": "0xDe2532E3Fa17DDfb9f7AFafeeE50607F4e5d161b"
+            "addr": ""
           }
         ]
       },
@@ -53,8 +53,8 @@
         "dispatcherAddr": "",
         "universalChannels": [
           {
-            "id": "",
-            "addr": ""
+            "id": "channel-10",
+            "addr": "0x0d3ed2B0A69a55519Ac249554aA58c5aD08E3174"
           }
         ]
       }
@@ -102,7 +102,7 @@
         "universalChannels": [
           {
             "id": "",
-            "addr": "0xDe2532E3Fa17DDfb9f7AFafeeE50607F4e5d161b"
+            "addr": ""
           }
         ]
       },
@@ -113,8 +113,8 @@
         "dispatcherAddr": "",
         "universalChannels": [
           {
-            "id": "",
-            "addr": ""
+            "id": "channel-11",
+            "addr": "0x0d3ed2B0A69a55519Ac249554aA58c5aD08E3174"
           }
         ]
       }
