@@ -1,0 +1,28 @@
+{
+  "name": "Mode Mainnet",
+  "chain": "ETH",
+  "rpc": [
+    "https://mainnet.mode.network"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Sepolia Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://mode.network",
+  "chainId": 34443,
+  "explorers": [
+    {
+      "name": "modescout",
+      "url": "https://explorer.mode.network/",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "chainName": "mode",
+    "dispatcherAddr": "",
+    "clients": {}
+  }
+}

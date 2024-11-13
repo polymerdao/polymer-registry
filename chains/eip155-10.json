@@ -17,19 +17,19 @@
     "decimals": 18
   },
   "infoURL": "https://optimism.io",
-  "shortName": "oeth",
+  "shortName": "optimism",
   "chainId": 10,
   "networkId": 10,
   "explorers": [
     {
-      "name": "etherscan",
-      "url": "https://optimistic.etherscan.io",
-      "standard": "EIP3091"
-    },
-    {
       "name": "blockscout",
       "url": "https://optimism.blockscout.com",
       "icon": "blockscout",
+      "standard": "EIP3091"
+    },
+    {
+      "name": "etherscan",
+      "url": "https://optimistic.etherscan.io",
       "standard": "EIP3091"
     },
     {
@@ -41,7 +41,7 @@
   ],
   "polymer": {
     "chainName": "optimism-mainnet",
-    "dispatcherAddr": "0xF42E19F9e4F5d93FdfA20F1ca78dB5B56789F778",
+    "dispatcherAddr": "0x7b456332e91Edf68B7d5E517085D5b15F9133fb8",
     "dispatcherStartBlock": 124984397,
     "clients": {
       "sim-client": {
@@ -52,7 +52,7 @@
         "universalChannels": [
           {
             "id": "",
-            "addr": "0xDe2532E3Fa17DDfb9f7AFafeeE50607F4e5d161b"
+            "addr": ""
           }
         ]
       },
@@ -63,8 +63,8 @@
         "dispatcherAddr": "",
         "universalChannels": [
           {
-            "id": "",
-            "addr": ""
+            "id": "channel-10",
+            "addr": "0x0d3ed2B0A69a55519Ac249554aA58c5aD08E3174"
           }
         ]
       }

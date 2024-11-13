@@ -22,15 +22,15 @@
   "icon": "base",
   "explorers": [
     {
-      "name": "basescan",
-      "url": "https://basescan.org",
-      "standard": "none"
-    },
-    {
       "name": "basescout",
       "url": "https://base.blockscout.com",
       "icon": "blockscout",
       "standard": "EIP3091"
+    },
+    {
+      "name": "basescan",
+      "url": "https://basescan.org",
+      "standard": "none"
     },
     {
       "name": "dexguru",
@@ -42,7 +42,7 @@
   "status": "active",
   "polymer": {
     "chainName": "base-mainnet",
-    "dispatcherAddr": "0xF42E19F9e4F5d93FdfA20F1ca78dB5B56789F778",
+    "dispatcherAddr": "0x7b456332e91Edf68B7d5E517085D5b15F9133fb8",
     "dispatcherStartBlock": 19389139,
     "clients": {
       "sim-client": {
@@ -53,7 +53,7 @@
         "universalChannels": [
           {
             "id": "",
-            "addr": "0xDe2532E3Fa17DDfb9f7AFafeeE50607F4e5d161b"
+            "addr": ""
           }
         ]
       },
@@ -64,8 +64,8 @@
         "dispatcherAddr": "",
         "universalChannels": [
           {
-            "id": "",
-            "addr": ""
+            "id": "channel-11",
+            "addr": "0x0d3ed2B0A69a55519Ac249554aA58c5aD08E3174"
           }
         ]
       }
