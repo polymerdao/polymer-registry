@@ -1,0 +1,25 @@
+{
+  "name": "Ink",
+  "chain": "ETH",
+  "faucets": [
+    "https://inkonchain.com/faucet"
+  ],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "",
+  "chainId": 763373,
+  "explorers": [
+    {
+      "name": "ink",
+      "url": "https://explorer-sepolia.inkonchain.com",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": "0x87baaD1c819Ff69d0A623EC9998959b3A304f38F"
+  }
+}

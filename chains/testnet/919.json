@@ -1,0 +1,23 @@
+{
+  "name": "Mode",
+  "chain": "ETH",
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Sepolia Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://mode.network",
+  "chainId": 919,
+  "explorers": [
+    {
+      "name": "modescout",
+      "url": "https://sepolia.explorer.mode.network/",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": "0x049C321Bb320bE0BD05130E46DBad058fac2dC66"
+  }
+}

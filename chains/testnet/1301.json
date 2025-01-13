@@ -1,0 +1,25 @@
+{
+  "name": "Unichain",
+  "chain": "ETH",
+  "faucets": [
+    "https://faucet.quicknode.com/unichain/sepolia"
+  ],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://www.unichain.org/",
+  "chainId": 1301,
+  "explorers": [
+    {
+      "name": "unichain",
+      "url": "https://unichain-sepolia.blockscout.com/",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": "0x87baaD1c819Ff69d0A623EC9998959b3A304f38F"
+  }
+}

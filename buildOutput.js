@@ -79,79 +79,111 @@ async function verifyCrossL2Prover(crossL2ProverAddr, rpcUrl) {
 	}
 }
 
+// Helper function to process a single network directory
+async function processNetworkDirectory(networkPath, networkType) {
+	const files = fs.readdirSync(networkPath);
+	const output = {};
+	const verificationPromises = [];
+	const verificationMetadata = [];
+
+	for (const file of files) {
+		if (path.extname(file) === '.json') {
+			const key = path.basename(file, '.json');
+			const rawData = fs.readFileSync(path.join(networkPath, file));
+			const jsonData = JSON.parse(rawData);
+			
+			output[key] = {};
+
+			// Basic data copying
+			if (jsonData.name) output[key].name = jsonData.name;
+			if (jsonData.rpc) output[key].rpc = jsonData.rpc;
+			if (jsonData.explorers) output[key].explorers = jsonData.explorers;
+			if (jsonData.polymer) output[key] = { ...output[key], ...jsonData.polymer };
+
+			// Verification promises with metadata
+			if (jsonData.rpc && jsonData.rpc.length > 0) {
+				verificationPromises.push(async () => {
+					const results = await Promise.all(
+						jsonData.rpc.map(rpc => verifyRPC(rpc, jsonData.chainId))
+					);
+					return results.every(result => result === true);
+				});
+				verificationMetadata.push(`RPC endpoints for ${networkType} chain ${key} (${jsonData.name})`);
+			}
+
+			if (jsonData.infoURL) {
+				verificationPromises.push(async () => {
+					return await verifyURL(jsonData.infoURL);
+				});
+				verificationMetadata.push(`InfoURL for ${networkType} chain ${key} (${jsonData.name}): ${jsonData.infoURL}`);
+			}
+
+			if (jsonData.explorers) {
+				verificationPromises.push(async () => {
+					const results = await Promise.all(
+						jsonData.explorers.map(explorer => verifyExplorer(explorer))
+					);
+					return results.every(result => result === true);
+				});
+				verificationMetadata.push(`Explorers for ${networkType} chain ${key} (${jsonData.name})`);
+			}
+
+			if (jsonData.polymer?.crossL2ProverAddr && jsonData.rpc) {
+				verificationPromises.push(async () => {
+					return await verifyCrossL2Prover(
+						jsonData.polymer.crossL2ProverAddr,
+						jsonData.rpc[0]
+					);
+				});
+				verificationMetadata.push(`CrossL2Prover address for ${networkType} chain ${key} (${jsonData.name}): ${jsonData.polymer.crossL2ProverAddr}`);
+			}
+		}
+	}
+
+	return {
+		output,
+		verificationPromises,
+		verificationMetadata
+	};
+}
+
 // Main function to read and process files
 async function processFiles(directoryPath) {
 	try {
-		const files = fs.readdirSync(directoryPath);
-		console.log('Files:', files);
+		const output = {
+			mainnet: {},
+			testnet: {}
+		};
 
-		const output = {};
-		const verificationPromises = [];
-		const verificationMetadata = []; // Track what each promise is verifying
+		const allVerificationPromises = [];
+		const allVerificationMetadata = [];
 
-		for (const file of files) {
-			if (path.extname(file) === '.json' && file.startsWith('eip155-')) {
-				const key = file.slice(7, -5);
-				const rawData = fs.readFileSync(path.join(directoryPath, file));
-				const jsonData = JSON.parse(rawData);
-				
-				output[key] = {};
+		// Process mainnet
+		const mainnetPath = path.join(directoryPath, 'mainnet');
+		if (fs.existsSync(mainnetPath)) {
+			const mainnetResults = await processNetworkDirectory(mainnetPath, 'mainnet');
+			output.mainnet = mainnetResults.output;
+			allVerificationPromises.push(...mainnetResults.verificationPromises);
+			allVerificationMetadata.push(...mainnetResults.verificationMetadata);
+		}
 
-				// Basic data copying
-				if (jsonData.name) output[key].name = jsonData.name;
-				if (jsonData.shortName) output[key].shortName = jsonData.shortName;
-				if (jsonData.rpc) output[key].rpc = jsonData.rpc;
-				if (jsonData.explorers) output[key].explorers = jsonData.explorers;
-				if (jsonData.polymer) output[key] = { ...output[key], ...jsonData.polymer };
-
-				// Verification promises with metadata
-				if (jsonData.rpc && jsonData.rpc.length > 0) {
-					verificationPromises.push(async () => {
-						const results = await Promise.all(
-							jsonData.rpc.map(rpc => verifyRPC(rpc, jsonData.chainId))
-						);
-						return results.every(result => result === true);
-					});
-					verificationMetadata.push(`RPC endpoints for chain ${key} (${jsonData.name})`);
-				}
-
-				if (jsonData.infoURL) {
-					verificationPromises.push(async () => {
-						return await verifyURL(jsonData.infoURL);
-					});
-					verificationMetadata.push(`InfoURL for chain ${key} (${jsonData.name}): ${jsonData.infoURL}`);
-				}
-
-				if (jsonData.explorers) {
-					verificationPromises.push(async () => {
-						const results = await Promise.all(
-							jsonData.explorers.map(explorer => verifyExplorer(explorer))
-						);
-						return results.every(result => result === true);
-					});
-					verificationMetadata.push(`Explorers for chain ${key} (${jsonData.name})`);
-				}
-
-				if (jsonData.polymer?.crossL2ProverAddr && jsonData.rpc) {
-					verificationPromises.push(async () => {
-						return await verifyCrossL2Prover(
-							jsonData.polymer.crossL2ProverAddr,
-							jsonData.rpc[0]
-						);
-					});
-					verificationMetadata.push(`CrossL2Prover address for chain ${key} (${jsonData.name}): ${jsonData.polymer.crossL2ProverAddr}`);
-				}
-			}
+		// Process testnet
+		const testnetPath = path.join(directoryPath, 'testnet');
+		if (fs.existsSync(testnetPath)) {
+			const testnetResults = await processNetworkDirectory(testnetPath, 'testnet');
+			output.testnet = testnetResults.output;
+			allVerificationPromises.push(...testnetResults.verificationPromises);
+			allVerificationMetadata.push(...testnetResults.verificationMetadata);
 		}
 
 		// Run all verifications
 		console.log('\nRunning verifications...');
-		const results = await Promise.all(verificationPromises.map(fn => fn()));
+		const results = await Promise.all(allVerificationPromises.map(fn => fn()));
 		
 		// Log detailed results
 		console.log('\nVerification Results:');
 		results.forEach((result, index) => {
-			console.log(`${result ? '✅' : '❌'} ${verificationMetadata[index]}`);
+			console.log(`${result ? '✅' : '❌'} ${allVerificationMetadata[index]}`);
 		});
 
 		// If any verification failed, exit

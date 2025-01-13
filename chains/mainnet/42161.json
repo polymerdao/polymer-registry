@@ -1,0 +1,25 @@
+{
+  "name": "Arbitrum",
+  "chain": "ETH",
+  "faucets": [
+    ""
+  ],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://arbitrum.io/",
+  "chainId": 42161,
+  "explorers": [
+    {
+      "name": "arbitrum",
+      "url": "https://arbiscan.io/",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": null
+  }
+}
