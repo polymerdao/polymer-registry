@@ -8,16 +8,16 @@ const directoryPath = './chains';
 // Helper function to verify RPC endpoint
 async function verifyRPC(rpcUrl, expectedChainId) {
 	try {
-		const provider = rpcUrl.startsWith('wss://')
+		const provider = rpcUrl.startsWith('wss://') 
 			? new ethers.WebSocketProvider(rpcUrl)
 			: new ethers.JsonRpcProvider(rpcUrl);
 
 		const networkChainId = (await provider.getNetwork()).chainId;
-
+		
 		if (rpcUrl.startsWith('wss://')) {
 			await provider.destroy();
 		}
-
+		
 		const isValid = BigInt(networkChainId) === BigInt(expectedChainId);
 		if (!isValid) {
 			console.error(`RPC ${rpcUrl} returned wrong chain ID: ${networkChainId} (expected ${expectedChainId})`);
@@ -67,14 +67,14 @@ async function verifyExplorer(explorer) {
 	}
 }
 
-// Helper function to verify dispatcher address
-async function verifyDispatcher(dispatcherAddr, rpcUrl) {
+// Helper function to verify cross l2 prover address
+async function verifyCrossL2Prover(crossL2ProverAddr, rpcUrl) {
 	try {
 		const provider = new ethers.JsonRpcProvider(rpcUrl);
-		const code = await provider.getCode(dispatcherAddr);
+		const code = await provider.getCode(crossL2ProverAddr);
 		return code !== '0x'; // Check if address has contract code
 	} catch (error) {
-		console.warn(`Failed to verify dispatcher ${dispatcherAddr}:`, error.message);
+		console.warn(`Failed to verify crossL2Prover ${crossL2ProverAddr}:`, error.message);
 		return false;
 	}
 }
@@ -87,13 +87,14 @@ async function processFiles(directoryPath) {
 
 		const output = {};
 		const verificationPromises = [];
+		const verificationMetadata = []; // Track what each promise is verifying
 
 		for (const file of files) {
 			if (path.extname(file) === '.json' && file.startsWith('eip155-')) {
 				const key = file.slice(7, -5);
 				const rawData = fs.readFileSync(path.join(directoryPath, file));
 				const jsonData = JSON.parse(rawData);
-
+				
 				output[key] = {};
 
 				// Basic data copying
@@ -103,7 +104,7 @@ async function processFiles(directoryPath) {
 				if (jsonData.explorers) output[key].explorers = jsonData.explorers;
 				if (jsonData.polymer) output[key] = { ...output[key], ...jsonData.polymer };
 
-				// Verification promises
+				// Verification promises with metadata
 				if (jsonData.rpc && jsonData.rpc.length > 0) {
 					verificationPromises.push(async () => {
 						const results = await Promise.all(
@@ -111,12 +112,14 @@ async function processFiles(directoryPath) {
 						);
 						return results.every(result => result === true);
 					});
+					verificationMetadata.push(`RPC endpoints for chain ${key} (${jsonData.name})`);
 				}
 
 				if (jsonData.infoURL) {
 					verificationPromises.push(async () => {
 						return await verifyURL(jsonData.infoURL);
 					});
+					verificationMetadata.push(`InfoURL for chain ${key} (${jsonData.name}): ${jsonData.infoURL}`);
 				}
 
 				if (jsonData.explorers) {
@@ -126,26 +129,34 @@ async function processFiles(directoryPath) {
 						);
 						return results.every(result => result === true);
 					});
+					verificationMetadata.push(`Explorers for chain ${key} (${jsonData.name})`);
 				}
 
-				if (jsonData.polymer?.dispatcherAddr && jsonData.rpc) {
+				if (jsonData.polymer?.crossL2ProverAddr && jsonData.rpc) {
 					verificationPromises.push(async () => {
-						return await verifyDispatcher(
-							jsonData.polymer.dispatcherAddr,
+						return await verifyCrossL2Prover(
+							jsonData.polymer.crossL2ProverAddr,
 							jsonData.rpc[0]
 						);
 					});
+					verificationMetadata.push(`CrossL2Prover address for chain ${key} (${jsonData.name}): ${jsonData.polymer.crossL2ProverAddr}`);
 				}
 			}
 		}
 
 		// Run all verifications
-		console.log('Running verifications...');
+		console.log('\nRunning verifications...');
 		const results = await Promise.all(verificationPromises.map(fn => fn()));
+		
+		// Log detailed results
+		console.log('\nVerification Results:');
+		results.forEach((result, index) => {
+			console.log(`${result ? '✅' : '❌'} ${verificationMetadata[index]}`);
+		});
 
 		// If any verification failed, exit
 		if (!results.every(result => result === true)) {
-			console.error('\nOutput file not generated due to verification failures.');
+			console.error('\nOutput file not generated due to verification failures listed above.');
 			process.exit(1);
 		}
 
@@ -156,7 +167,7 @@ async function processFiles(directoryPath) {
 
 		// Write the output object to 'output.json' in the 'dist' directory
 		fs.writeFileSync('dist/output.json', JSON.stringify(output, null, 2));
-		console.log('output.json has been generated successfully.');
+		console.log('\noutput.json has been generated successfully.');
 	} catch (error) {
 		console.error('Error processing files:', error);
 		process.exit(1);
