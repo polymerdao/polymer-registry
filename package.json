@@ -1,0 +1,15 @@
+{
+  "name": "chain-config-builder",
+  "version": "1.0.0",
+  "description": "Chain configuration builder with endpoint verification",
+  "main": "buildOutput.js",
+  "scripts": {
+    "build": "node buildOutput.js"
+  },
+  "dependencies": {
+    "ethers": "^6.11.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+} 
