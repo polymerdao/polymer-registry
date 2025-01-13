@@ -1,0 +1,30 @@
+{
+  "name": "OP",
+  "chain": "ETH",
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://optimism.io",
+  "chainId": 10,
+  "networkId": 10,
+  "explorers": [
+    {
+      "name": "blockscout",
+      "url": "https://optimism.blockscout.com",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    },
+    {
+      "name": "etherscan",
+      "url": "https://optimistic.etherscan.io",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": null,
+    "clients": {}
+  }
+}

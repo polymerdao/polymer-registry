@@ -1,0 +1,25 @@
+{
+  "name": "Mantle",
+  "chain": "ETH",
+  "faucets": [
+    "https://faucet.quicknode.com/mantle/sepolia"
+  ],
+  "nativeCurrency": {
+    "name": "Mantle",
+    "symbol": "MNT",
+    "decimals": 18
+  },
+  "infoURL": "https://www.mantle.xyz/",
+  "chainId": 5003,
+  "explorers": [
+    {
+      "name": "mantle",
+      "url": "https://sepolia.mantlescan.xyz/",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": null
+  }
+}

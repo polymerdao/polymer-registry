@@ -1,0 +1,25 @@
+{
+  "name": "Everclear",
+  "chain": "ETH",
+  "faucets": [
+    ""
+  ],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://www.everclear.org/",
+  "chainId": 25327,
+  "explorers": [
+    {
+      "name": "everclear",
+      "url": "https://scan.everclear.org/",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": null
+  }
+}

@@ -1,157 +1,217 @@
 {
-  "10": {
-    "name": "OP Mainnet",
-    "shortName": "optimism",
-    "rpc": [
-      "https://mainnet.optimism.io",
-      "https://optimism-rpc.publicnode.com",
-      "wss://optimism-rpc.publicnode.com",
-      "https://optimism.gateway.tenderly.co",
-      "wss://optimism.gateway.tenderly.co",
-      "https://optimism.drpc.org",
-      "wss://optimism.drpc.org"
-    ],
-    "explorers": [
-      {
-        "name": "blockscout",
-        "url": "https://optimism.blockscout.com",
-        "icon": "blockscout",
-        "standard": "EIP3091"
-      },
-      {
-        "name": "etherscan",
-        "url": "https://optimistic.etherscan.io",
-        "standard": "EIP3091"
-      },
-      {
-        "name": "dexguru",
-        "url": "https://optimism.dex.guru",
-        "icon": "dexguru",
-        "standard": "EIP3091"
-      }
-    ],
-    "chainName": "optimism-mainnet",
-    "dispatcherAddr": "0x7b456332e91Edf68B7d5E517085D5b15F9133fb8",
-    "dispatcherStartBlock": 124984397,
-    "clients": {
-      "sim-client": {
-        "clientSuffix": "optimism-sim",
-        "canonConnFrom": "connection-0",
-        "canonConnTo": "connection-1",
-        "dispatcherAddr": "",
-        "universalChannels": [
-          {
-            "id": "",
-            "addr": ""
-          }
-        ]
-      },
-      "op-client": {
-        "clientSuffix": "optimism-proofs",
-        "canonConnFrom": "connection-18",
-        "canonConnTo": "connection-19",
-        "dispatcherAddr": "",
-        "universalChannels": [
-          {
-            "id": "channel-10",
-            "addr": "0x0d3ed2B0A69a55519Ac249554aA58c5aD08E3174"
-          }
-        ]
-      }
+  "mainnet": {
+    "10": {
+      "name": "OP",
+      "explorers": [
+        {
+          "name": "blockscout",
+          "url": "https://optimism.blockscout.com",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        },
+        {
+          "name": "etherscan",
+          "url": "https://optimistic.etherscan.io",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": null,
+      "clients": {}
+    },
+    "130": {
+      "name": "Unichain",
+      "explorers": [],
+      "crossL2ProverAddr": null
+    },
+    "5000": {
+      "name": "Mantle",
+      "explorers": [
+        {
+          "name": "mantle",
+          "url": "https://explorer.mantle.xyz/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": null
+    },
+    "8453": {
+      "name": "Base",
+      "explorers": [
+        {
+          "name": "basescout",
+          "url": "https://base.blockscout.com",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        },
+        {
+          "name": "basescan",
+          "url": "https://basescan.org",
+          "standard": "none"
+        }
+      ],
+      "crossL2ProverAddr": null,
+      "clients": {}
+    },
+    "25327": {
+      "name": "Everclear",
+      "explorers": [
+        {
+          "name": "everclear",
+          "url": "https://scan.everclear.org/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": null
+    },
+    "34443": {
+      "name": "Mode",
+      "explorers": [
+        {
+          "name": "modescout",
+          "url": "https://explorer.mode.network/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": null,
+      "clients": {}
+    },
+    "42161": {
+      "name": "Arbitrum",
+      "explorers": [
+        {
+          "name": "arbitrum",
+          "url": "https://arbiscan.io/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": null
+    },
+    "60808": {
+      "name": "Bob",
+      "explorers": [
+        {
+          "name": "bobscout",
+          "url": "https://explorer.gobob.xyz/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": "",
+      "clients": {}
     }
   },
-  "8453": {
-    "name": "Base",
-    "shortName": "base",
-    "rpc": [
-      "https://mainnet.base.org/",
-      "https://developer-access-mainnet.base.org/",
-      "https://base.gateway.tenderly.co",
-      "wss://base.gateway.tenderly.co",
-      "https://base-rpc.publicnode.com",
-      "wss://base-rpc.publicnode.com"
-    ],
-    "explorers": [
-      {
-        "name": "basescout",
-        "url": "https://base.blockscout.com",
-        "icon": "blockscout",
-        "standard": "EIP3091"
-      },
-      {
-        "name": "basescan",
-        "url": "https://basescan.org",
-        "standard": "none"
-      },
-      {
-        "name": "dexguru",
-        "url": "https://base.dex.guru",
-        "icon": "dexguru",
-        "standard": "EIP3091"
-      }
-    ],
-    "chainName": "base-mainnet",
-    "dispatcherAddr": "0x7b456332e91Edf68B7d5E517085D5b15F9133fb8",
-    "dispatcherStartBlock": 19389139,
-    "clients": {
-      "sim-client": {
-        "clientSuffix": "base-sim",
-        "canonConnFrom": "connection-4",
-        "canonConnTo": "connection-5",
-        "dispatcherAddr": "",
-        "universalChannels": [
-          {
-            "id": "",
-            "addr": ""
-          }
-        ]
-      },
-      "op-client": {
-        "clientSuffix": "base-proofs-2",
-        "canonConnFrom": "connection-20",
-        "canonConnTo": "connection-21",
-        "dispatcherAddr": "",
-        "universalChannels": [
-          {
-            "id": "channel-11",
-            "addr": "0x0d3ed2B0A69a55519Ac249554aA58c5aD08E3174"
-          }
-        ]
-      }
+  "testnet": {
+    "919": {
+      "name": "Mode",
+      "explorers": [
+        {
+          "name": "modescout",
+          "url": "https://sepolia.explorer.mode.network/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": "0x049C321Bb320bE0BD05130E46DBad058fac2dC66"
+    },
+    "1301": {
+      "name": "Unichain",
+      "explorers": [
+        {
+          "name": "unichain",
+          "url": "https://unichain-sepolia.blockscout.com/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": "0x87baaD1c819Ff69d0A623EC9998959b3A304f38F"
+    },
+    "5003": {
+      "name": "Mantle",
+      "explorers": [
+        {
+          "name": "mantle",
+          "url": "https://sepolia.mantlescan.xyz/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": null
+    },
+    "6398": {
+      "name": "Everclear",
+      "explorers": [
+        {
+          "name": "everclear",
+          "url": "https://scan.testnet.everclear.org/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": "0x761521b716eDC64cfb24AAFfDf462c89592BD51f"
+    },
+    "84532": {
+      "name": "Base",
+      "explorers": [
+        {
+          "name": "basescout",
+          "url": "https://base-sepolia.blockscout.com",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": "0xc774Ff2aC1f873971e7E60A9b41cF46042989380"
+    },
+    "421614": {
+      "name": "Arbitrum",
+      "explorers": [
+        {
+          "name": "arbitrum",
+          "url": "https://sepolia.arbiscan.io/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": "0x87baaD1c819Ff69d0A623EC9998959b3A304f38F"
+    },
+    "763373": {
+      "name": "Ink",
+      "explorers": [
+        {
+          "name": "ink",
+          "url": "https://explorer-sepolia.inkonchain.com",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": "0x87baaD1c819Ff69d0A623EC9998959b3A304f38F"
+    },
+    "808813": {
+      "name": "Bob",
+      "explorers": [
+        {
+          "name": "bobscout",
+          "url": "https://testnet-explorer.gobob.xyz/",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": "0x642ccff87244Fc27d58525fEB165b1bAaF589888"
+    },
+    "11155420": {
+      "name": "OP",
+      "explorers": [
+        {
+          "name": "opscout",
+          "url": "https://optimism-sepolia.blockscout.com",
+          "icon": "blockscout",
+          "standard": "EIP3091"
+        }
+      ],
+      "crossL2ProverAddr": "0x1CCb363c18484A568DCB0Ec37fE5ad716C1D6e77"
     }
-  },
-  "34443": {
-    "name": "Mode Mainnet",
-    "rpc": [
-      "https://mainnet.mode.network"
-    ],
-    "explorers": [
-      {
-        "name": "modescout",
-        "url": "https://explorer.mode.network/",
-        "icon": "blockscout",
-        "standard": "EIP3091"
-      }
-    ],
-    "chainName": "mode",
-    "dispatcherAddr": "",
-    "clients": {}
-  },
-  "60808": {
-    "name": "Bob Mainnet",
-    "rpc": [
-      "https://rpc.gobob.xyz"
-    ],
-    "explorers": [
-      {
-        "name": "bobscout",
-        "url": "https://explorer.gobob.xyz/",
-        "icon": "blockscout",
-        "standard": "EIP3091"
-      }
-    ],
-    "chainName": "bob",
-    "dispatcherAddr": "",
-    "clients": {}
   }
 }

@@ -1,0 +1,26 @@
+{
+  "name": "Everclear",
+  "chain": "ETH",
+  "faucets": [
+    "https://drpc.org/faucet/everclear",
+    "https://testnet.explorer.everclear.org/intents/create"
+  ],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://www.everclear.org/",
+  "chainId": 6398,
+  "explorers": [
+    {
+      "name": "everclear",
+      "url": "https://scan.testnet.everclear.org/",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": "0x761521b716eDC64cfb24AAFfDf462c89592BD51f"
+  }
+}

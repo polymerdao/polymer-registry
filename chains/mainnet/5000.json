@@ -1,0 +1,25 @@
+{
+  "name": "Mantle",
+  "chain": "ETH",
+  "faucets": [
+    ""
+  ],
+  "nativeCurrency": {
+    "name": "Mantle",
+    "symbol": "MNT",
+    "decimals": 18
+  },
+  "infoURL": "https://www.mantle.xyz/",
+  "chainId": 5000,
+  "explorers": [
+    {
+      "name": "mantle",
+      "url": "https://explorer.mantle.xyz/",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": null
+  }
+}

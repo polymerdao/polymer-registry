@@ -1,0 +1,25 @@
+{
+  "name": "OP",
+  "chain": "ETH",
+  "faucets": ["https://app.optimism.io/faucet"],
+  "nativeCurrency": {
+    "name": "Sepolia Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://optimism.io",
+  "chainId": 11155420,
+  "networkId": 11155420,
+  "slip44": 1,
+  "explorers": [
+    {
+      "name": "opscout",
+      "url": "https://optimism-sepolia.blockscout.com",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": "0x1CCb363c18484A568DCB0Ec37fE5ad716C1D6e77"
+  }
+}

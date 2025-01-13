@@ -1,0 +1,25 @@
+{
+  "name": "Arbitrum",
+  "chain": "ETH",
+  "faucets": [
+    "https://faucet.quicknode.com/arbitrum/sepolia"
+  ],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://arbitrum.io/",
+  "chainId": 421614,
+  "explorers": [
+    {
+      "name": "arbitrum",
+      "url": "https://sepolia.arbiscan.io/",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "polymer": {
+    "crossL2ProverAddr": "0x87baaD1c819Ff69d0A623EC9998959b3A304f38F"
+  }
+}

@@ -1,9 +1,6 @@
 {
-  "name": "Bob Mainnet",
+  "name": "Bob",
   "chain": "ETH",
-  "rpc": [
-    "https://rpc.gobob.xyz"
-  ],
   "faucets": [],
   "nativeCurrency": {
     "name": "Ether",
@@ -21,8 +18,7 @@
     }
   ],
   "polymer": {
-    "chainName": "bob",
-    "dispatcherAddr": "",
+    "crossL2ProverAddr": "",
     "clients": {}
   }
 }
